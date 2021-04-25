@@ -5,6 +5,16 @@
 ## 2-2.Web版  
 - 新規予約  
 
+ 画面 | 画面イメージ | 差し替え案  
+----|----|----
+ 画面１ | <img src="Web_images/Web1_1.png" height="500" alt="image"> |  
+ 画面２ | <img src="Web_images/Web1_2.png" height="500" alt="image"> | 
+ 画面３ | <img src="Web_images/Web1_3.png" height="500" alt="image"> | 
+ 画面４ | <img src="Web_images/Web1_4.png" height="500" alt="image"> | 
+ 画面５ | <img src="Web_images/Web1_5.png" height="500" alt="image"> | 
+ 画面６ | <img src="Web_images/Web1_6.png" height="500" alt="image"> | 
+
+
 No | Sub | case | Type | Message | 差し替え案  
 ----|----|----|----|----|----  
 0 | 1 | はじめに | 正常 | | 予約番号が発行されるまで、予約は確定していません。今回は７５歳以上のかたのみ受け付けます。ファイザー社のワクチンは１回目接種の３週間後の同じ曜日に２回目接種が必要なため、２回分の予約をお取りいただきます。その他、箕面市からのお知らせはご確認いただけましたか？[はい]「いいえ」  
