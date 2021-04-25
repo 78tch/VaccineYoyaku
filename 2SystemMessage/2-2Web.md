@@ -1,9 +1,7 @@
 # 2. システムメッセージ文言
-## 1. システム概要　2.システムメッセージ文言 　3. 制限機能　4. 動作確認　5. コールセンター話法  
-## 2-1.LINE版  
-
-## 2-2.Web版  
-- 新規予約  
+## [戻る](https://github.com/78tch/VaccineYoyaku)　[1.システム概要](https://github.com/78tch/VaccineYoyaku/blob/main/1About/1-1About.md)　→　[2.システムメッセージ文言](https://github.com/78tch/VaccineYoyaku/blob/main/2SystemMessage/2-1LINE.md)　→　[3.制限機能](https://github.com/78tch/VaccineYoyaku/blob/main/3Limit/Limit.md)　→　[4. 動作確認](https://github.com/78tch/VaccineYoyaku/blob/main/4Check/4-1Check.md) 　→　[5. コールセンター話法](https://github.com/78tch/VaccineYoyaku/blob/main/5CallCenter/5-1CallCenter.md)  
+## [2-1.LINE版](https://github.com/78tch/VaccineYoyaku/blob/main/2SystemMessage/2-1LINE.md)　 →　2-2.Web版　 →　[2-3.コールセンター版](https://github.com/78tch/VaccineYoyaku/blob/main/2SystemMessage/2-3Callcenter.md) 
+- 2-2-1.新規予約  
 
  画面 | 画面イメージ | 差し替え案  
 ----|----|----
@@ -15,7 +13,7 @@
  画面５ | <img src="Web_images/Web1_5.png" height="500" alt="image"> | （日付黒字？）（スクリーンショット、必要？）「この画面を画像として保存」？ 
  画面６ | <img src="Web_images/Web1_6.png" height="500" alt="image"> | スクリーンショットの画像 
 
-- マイページ  
+- 2-2-2.マイページ  
 
 画面 | 画面イメージ | 差し替え案  
 ----|----|----
@@ -27,7 +25,7 @@
  画面４_3 | <img src="Web_images/Web2_4_3.png" height="500" alt="image"> | （「問い合わせ」コールセンターの電話番号）
  
 
-- 予約変更  
+- 2-2-3.予約変更  
 
  画面 | 画面イメージ | 差し替え案  
 ----|----|----  
@@ -39,7 +37,7 @@
  画面６ | <img src="Web_images/Web3_6.png" height="500" alt="image"> | 
  画面７ | <img src="Web_images/Web3_7.png" height="500" alt="image"> | 
 
-- 予約キャンセル  
+- 3-3-4.予約キャンセル  
 
  画面 | 画面イメージ | 差し替え案  
 ----|----|----  
@@ -50,6 +48,3 @@
  画面５ | <img src="Web_images/Web4_5.png" height="500" alt="image"> | 
  画面６ | <img src="Web_images/Web4_6.png" height="500" alt="image"> | （キャンセルした人を「コールセンター版」で見るとどうなっているか確認）
  画面７ | <img src="Web_images/Web4_7.png" height="500" alt="image"> | 
-
-  
-## 2-3.コールセンター版  

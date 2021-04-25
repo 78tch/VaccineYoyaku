@@ -1,5 +1,5 @@
 # 1. システム概要  
-## [戻る](https://github.com/78tch/VaccineYoyaku)　[1.システム概要](https://github.com/78tch/VaccineYoyaku/blob/main/1About/1-1About.md)　→　[2.システムメッセージ文言](https://github.com/78tch/VaccineYoyaku/blob/main/2SystemMessage/2-1LINE.md)　→　[3.制限機能](https://github.com/78tch/VaccineYoyaku/blob/main/3Limit/Limit.md)　→　4. 動作確認　→　5. コールセンター話法  
+## [戻る](https://github.com/78tch/VaccineYoyaku)　1.システム概要　→　[2.システムメッセージ文言](https://github.com/78tch/VaccineYoyaku/blob/main/2SystemMessage/2-1LINE.md)　→　[3.制限機能](https://github.com/78tch/VaccineYoyaku/blob/main/3Limit/Limit.md)　→　[4. 動作確認](https://github.com/78tch/VaccineYoyaku/blob/main/4Check/4-1Check.md) 　→　[5. コールセンター話法](https://github.com/78tch/VaccineYoyaku/blob/main/5CallCenter/5-1CallCenter.md)  
 ## 1-1.システムの構成  
 PA社が開発し、「Salesforce.com」上に設置するシステムを採用。  
 「Salesforce.com」は、V-SYSでも採用されている、顧客関係管理システムを中心としたクラウドコンピューティング・サービスである。（レンタルサーバー＋ミドルウェア、というイメージ。）  
@@ -51,11 +51,3 @@ PA社が開発し、「Salesforce.com」上に設置するシステムを採用�
 - 「会場」：設定項目は「会場名、所在地、予約枠の分間隔」。「会場名」が選択肢になるので命名規則に注意。  
 - 「稼働日」：設定項目は「年月日、開始時刻、終了時刻、各予約枠の予約可能数・内数としてのコールセンターでの予約可能数、予約受付開始・終了・変更の受付を制限する日数」。「会場」ごとに登録する。ペアとなる２回接種日が必須。  
 - 「予約枠」：設定項目は「開始時刻、終了時刻、枠自体の有効無効」。予約可能数を個別修正できるよう調整中。（対応不可なら、ダミー予約を前もって入れる）「会場・稼働日」ごとに、予約枠を登録する。  
-  
-1. 接種券番号を入力  
-2. 生年月日を入力  
-3. 会場を選択  
-4. 日付を選択  
-5. 時間帯を選択  
-6. 1回目接種の予約枠と、3週間後に2回目接種の予約枠が提示され、それでよければ確定をする。
-7. 予約受付番号が発行される。  

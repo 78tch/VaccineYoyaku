@@ -1,7 +1,7 @@
 # 2. システムメッセージ文言
-## 1. システム概要　2.システムメッセージ文言 　3. 制限機能　4. 動作確認　5. コールセンター話法  
-## 2-1.LINE版  
-- 新規予約  
+## [戻る](https://github.com/78tch/VaccineYoyaku)　[1.システム概要](https://github.com/78tch/VaccineYoyaku/blob/main/1About/1-1About.md)　→　[2.システムメッセージ文言](https://github.com/78tch/VaccineYoyaku/blob/main/2SystemMessage/2-1LINE.md)　→　[3.制限機能](https://github.com/78tch/VaccineYoyaku/blob/main/3Limit/Limit.md)　→　[4. 動作確認](https://github.com/78tch/VaccineYoyaku/blob/main/4Check/4-1Check.md) 　→　[5. コールセンター話法](https://github.com/78tch/VaccineYoyaku/blob/main/5CallCenter/5-1CallCenter.md)  
+## 2-1.LINE版　 →　[2-2.Web版](https://github.com/78tch/VaccineYoyaku/blob/main/2SystemMessage/2-2Web.md)　 →　[2-3.コールセンター版](https://github.com/78tch/VaccineYoyaku/blob/main/2SystemMessage/2-3Callcenter.md) 
+- 2-1-1.新規予約  
 
 No | Sub | case | Type | Message | 差し替え案  
 ----|----|----|----|----|----  
@@ -30,7 +30,7 @@ No | Sub | case | Type | Message | 差し替え案
 8 | 2 | 操作キャンセル（取り消しにしたい？）ボタンを押した後 | エラー | キャンセルが完了しました。 | 操作を取り消しました。   
 9 | 1 | データを検索したが見つからなかったとき（どんな時？） | エラー | データが見つかりませんでした。 | ？  
   
-- 予約変更  
+- 2-1-2.予約変更  
 
 No | Sub | case | Type | Message | 差し替え案  
 ----|----|----|----|----|----  
@@ -58,7 +58,7 @@ No | Sub | case | Type | Message | 差し替え案
 11 | 1 | データを検索したが見つからなかったとき | エラー | データが見つかりませんでした。 | ？
 11 | 2 | コールセンターで優先予約したものをLINEで予約変更した際のエラー | エラー | 予約タイプを事前に更新してください。 | この予約は変更できません。コールセンター（072-000-0000）へご相談ください。 
 
-- 予約キャンセル  
+- 2-1-3.予約キャンセル  
 
 No | SubNo | Use case | Case Type | Message | 差し替え案  
 ----|----|----|----|----|----  
@@ -74,7 +74,5 @@ No | SubNo | Use case | Case Type | Message | 差し替え案
 5 | 2 | キャンセル時に既にキャンセルデータが見つからなかった場合 | エラー | BOOKING IDが正しくありません。 | BOOKING IDが正しくありません。システム管理者へ連絡してください。
 6 | 1 | データを検索したが見つからなかったとき | エラー | データが見つかりませんでした。 | ？
 
-## 2-2.Web版  
-  
-## 2-3.コールセンター版  
+ 
  
