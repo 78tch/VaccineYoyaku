@@ -15,7 +15,7 @@
 ----|----|----
  LINE版 | <img src="images/birthday_line.jpg" width="400" alt="image"> | どの会場を選んでも「データが見つかりませんでした。」となる。 
  Web版 | <img src="images/birthday_web.png" width="400" alt="image"> | どの会場を選んでも、すべて「×」（予約が満員の状態と同様）
- コールセンター版 | <img src="images/birthday_callcenter.png" width="400" alt="image"> | 「登録」を押すと「1947年4月1日以前の方のみ予約可能です。」と警告する。
+ コールセンター版 | <img src="images/birthday_callcenter.png" width="400" alt="image"> | 「登録」を押すと「1947年4月1日以前の方のみ予約可能です。」とエラーになる。
  
 
 ## 3-3.満16歳以上のみ予約可（当日年齢制限）
