@@ -4,3 +4,5 @@
 ## 3. [制限機能](https://github.com/78tch/VaccineYoyaku/blob/main/3Limit/Limit.md)  
 ## 4. [動作確認](https://github.com/78tch/VaccineYoyaku/blob/main/4Check/4-1Check.md)  
 ## 5. [コールセンター話法](https://github.com/78tch/VaccineYoyaku/blob/main/5CallCenter/5-1CallCenter.md)
+## 6. [予約枠](https://github.com/78tch/VaccineYoyaku/blob/main/6Timetable/6-1Timetable.md)
+
