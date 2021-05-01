@@ -1,7 +1,8 @@
 # 6.予約枠  
 ## [戻る](https://github.com/78tch/VaccineYoyaku)　[1.システム概要](https://github.com/78tch/VaccineYoyaku/blob/main/1About/1-1About.md)　→　[2.システムメッセージ文言](https://github.com/78tch/VaccineYoyaku/blob/main/2SystemMessage/2-1LINE.md)　→　[3.制限機能](https://github.com/78tch/VaccineYoyaku/blob/main/3Limit/3-1Limit.md)　→　[4. 動作確認](https://github.com/78tch/VaccineYoyaku/blob/main/4Check/4-1Check.md) 　→　[5. コールセンター話法](https://github.com/78tch/VaccineYoyaku/blob/main/5Callcenter/5-1Callcenter.md)　→6. 予約枠　→　[7. 設定切替](https://github.com/78tch/VaccineYoyaku/blob/main/7Operation/7-1Operation.md)  
 ## 6-1.原則  
-1. 会場は、5/6（木）時点は「総合保健福祉センター」「東生涯学習センター」「西南生涯学習センター」の３つ。6/1に巽今宮を追加する。  
+1. 会場は、5/6（木）時点は「総合保健福祉センター」「東生涯学習センター」「西南生涯学習センター」の３つ。  
+　6/1に巽今宮を追加する。  
 2. １回目接種について、5/12（水）から、6/30（水）までの、水・木・土・日で設定。
 3. 「１回目接種日」でいうと、第１周が5/12（水）〜5/30（日）の３週（18日間）、第２周が6/2（水）〜6/20（日）の３週（18日間）、第３周が6/23（水）〜6/30（水）の１週と１日（8日間）の、３周の途中までの受け付けをする。   
 4. ５月（第１周）について、「総合保健福祉センター」は土・日のみ。水・木はなし。
