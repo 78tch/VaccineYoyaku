@@ -27,7 +27,7 @@ Boolean active = false;
 delete [ SELECT Id FROM pa_cv19_reserv__Time_Slot__c WHERE pa_cv19_reserv__Active__c=:active AND AccountName__c=:AccountName  LIMIT 300];
 
 特定会場の予約枠を削除
-String AccountName__c='会場名';
+String name='会場名';
 delete[SELECT id , name FROM pa_cv19_reserv__time_slot__c WHERE AccountName__c=:name limit 500];
 
 「病院ID」がない予約枠を削除
