@@ -19,7 +19,7 @@ delete [SELECT id , name FROM pa_cv19_reserv__time_slot__c limit 3000];
 
 「有効がオフ」を削除
 Boolean active = false;
-delete [ SELECT Id FROM pa_cv19_reserv__Time_Slot__c WHERE pa_cv19_reserv__Active__c=:active LIMIT 3000];
+delete [ SELECT Id FROM pa_cv19_reserv__Time_Slot__c WHERE pa_cv19_reserv__Active__c=:active LIMIT 1000];
 
 特定会場の「有効がオフ」を削除
 String AccountName = '会場名';
