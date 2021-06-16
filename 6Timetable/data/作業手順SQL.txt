@@ -55,6 +55,13 @@ LINE利用者
 7/14～8/01_東生涯学習センター
 7/14～8/01_西南生涯学習センター
 
+7/14～8/01_総合保健福祉センター(60歳)
+7/14～8/01_東生涯学習センター(60歳)
+7/14～8/01_西南生涯学習センター(60歳)
+8/04～8/22_総合保健福祉センター(60歳)
+8/04～8/22_東生涯学習センター(60歳)
+8/04～8/22_西南生涯学習センター(60歳)
+
 
 String bookingFrom = 'LINE';       
         List<pa_cv19_reserv__Booking__c> workingRecords = [SELECT ID FROM pa_cv19_reserv__Booking__c WHERE pa_cv19_reserv__Line_Id__c != null AND pa_cv19_reserv__Booking_From__c = :bookingFrom AND pa_cv19_reserv__Line_Friend_Id__c = null ];
