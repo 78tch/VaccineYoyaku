@@ -44,6 +44,10 @@ delete [SELECT Id, Name FROM pa_cv19_reserv__Booking__c limit 1000];
 全削除
 delete [SELECT Id, Name FROM pa_cv19_reserv__CustomContact__c limit 500];
 
+「電話番号」がない接種者を削除　
+delete [SELECT Id, Name FROM pa_cv19_reserv__CustomContact__c WHERE pa_cv19_reserv__Phone__c = null limit 2000];
+
+
 LINE利用者
 
 7/13～7/30_巽今宮病院
