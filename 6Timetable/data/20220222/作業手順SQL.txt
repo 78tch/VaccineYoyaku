@@ -1,0 +1,129 @@
+●会場
+全削除
+delete [SELECT Id, Name FROM Account limit 500];
+
+●稼働日
+全削除
+delete [SELECT Id, Name FROM pa_cv19_reserv__Operating_Time__c limit 2000];
+
+「病院IDがない」稼働日を削除
+delete [SELECT ID FROM pa_cv19_reserv__Operating_Time__c WHERE pa_cv19_reserv__Hospital_ID__c = null limit 500];
+
+特定会場の稼働日を削除
+String name = '会場名';
+delete  [SELECT ID FROM pa_cv19_reserv__Operating_Time__c WHERE AccountName__c = :name limit 500] ;
+
+●予約枠
+全削除
+delete [SELECT id , name FROM pa_cv19_reserv__time_slot__c limit 3000];
+
+「有効がオフ」を削除
+Boolean active = false;
+delete [ SELECT Id FROM pa_cv19_reserv__Time_Slot__c WHERE pa_cv19_reserv__Active__c=:active LIMIT 1000];
+
+特定会場の「有効がオフ」を削除
+String AccountName = '会場名';
+Boolean active = false;
+delete [ SELECT Id FROM pa_cv19_reserv__Time_Slot__c WHERE pa_cv19_reserv__Active__c=:active AND AccountName__c=:AccountName  LIMIT 300];
+
+特定会場の予約枠を削除
+String name='会場名';
+delete[SELECT id , name FROM pa_cv19_reserv__time_slot__c WHERE AccountName__c=:name limit 500];
+
+「病院ID」がない予約枠を削除
+delete [SELECT ID FROM pa_cv19_reserv__Time_Slot__c WHERE pa_cv19_reserv__Operating_Time__r.pa_cv19_reserv__Hospital_ID__c = null limit 500] ;
+
+「稼働日」がない予約枠を削除
+delete [SELECT ID FROM pa_cv19_reserv__Time_Slot__c WHERE pa_cv19_reserv__Operating_Time__c = null limit 500];
+
+●ワクチン予約
+全削除
+delete [SELECT Id, Name FROM pa_cv19_reserv__Booking__c limit 1000];
+
+●接種者
+全削除
+delete [SELECT Id, Name FROM pa_cv19_reserv__CustomContact__c limit 500];
+
+「電話番号」がない接種者を削除　
+delete [SELECT Id, Name FROM pa_cv19_reserv__CustomContact__c WHERE pa_cv19_reserv__Phone__c = null limit 2000];
+
+
+LINE利用者
+
+7/13～7/30_巽今宮病院
+6/09～6/18_巽今宮病院
+7/01～7/11_総合保健福祉センター
+7/01～7/11_東生涯学習センター
+7/01～7/11_西南生涯学習センター
+7/14～8/01_総合保健福祉センター
+7/14～8/01_東生涯学習センター
+7/14～8/01_西南生涯学習センター
+
+7/14～8/01_総合保健福祉センター(60歳)
+7/14～8/01_東生涯学習センター(60歳)
+7/14～8/01_西南生涯学習センター(60歳)
+8/04～8/22_総合保健福祉センター(60歳)
+8/04～8/22_東生涯学習センター(60歳)
+8/04～8/22_西南生涯学習センター(60歳)
+
+
+String bookingFrom = 'LINE';       
+        List<pa_cv19_reserv__Booking__c> workingRecords = [SELECT ID FROM pa_cv19_reserv__Booking__c WHERE pa_cv19_reserv__Line_Id__c != null AND pa_cv19_reserv__Booking_From__c = :bookingFrom AND pa_cv19_reserv__Line_Friend_Id__c = null ];
+        List<Id> targetIdList = new List<Id>();        
+        for(pa_cv19_reserv__Booking__c w : workingRecords ){
+            targetIdList.add(w.Id);
+        }
+        BookingContactPhoneUpdateBatch  batch = new BookingContactPhoneUpdateBatch (targetIdList);
+        Database.executebatch(batch, 200);
+
+●手順
+１．まず元になるExcelで会場と稼働日を書き出し、CSVファイルで保存。
+１．「会場」9をインポート
+　取引先責任者の一致条件：「名前」
+　取引先の一致条件：「名前と部門」
+２．「会場ワクチン設定」をする
+　※！！これを忘れると、予定枠がちゃんと作られない。！！
+
+
+３．「稼働日」162をインポート
+　一致条件：「外部ID（外部ID）」
+　病院ID参照項目を設定するためにファイルのどの会場項目を照合しますか?：「会場　名前」
+
+４．「稼働日」で「予約枠未作成リスト」で「時間枠作成」を実施
+　１６２件あり、初期は５０件しか表示されていないので、スクロールして１６２件表示してから選択しないと、作業漏れになる。
+
+５．「有効」がチェックなしの予約枠を削除
+
+６．人数がイレギュラーな枠の人数修正をする
+　５月第１周の、水木の第１・２枠について、４人→５人に直す。
+
+７．医療従事者の先約を入れる
+　５月１２日の西南学センのラスト２枠を無効に
+→元データを「終了時刻14:10」としたほうが確実
+
+
+８．「ダミー稼働日」36を作って、Web版のカレンダーで今週を表示した際に「予約枠がないので時刻表が折りたたまれる」問題を回避する。
+　一致条件：「外部ID（外部ID）」
+　病院ID参照項目を設定するためにファイルのどの会場項目を照合しますか?：「会場　名前」
+「ダミー稼働日」は、「予約枠未作成リスト」で「時間枠作成」を実施する必要はない。（無効な枠しか作成されない設定にしてあるため。）
+
+
+
+●インポート時の注意
+・会場：
+　取引先責任者の一致条件：「名前」
+　取引先の一致条件：「名前と場所」
+
+・接種者：
+　一致条件：「接種券番号（外部ID）」
+
+・稼働日：
+　一致条件：「外部ID（外部ID）」
+　病院ID参照項目を設定するためにファイルのどの会場項目を照合しますか?：「会場　名前」
+
+
+●稼働日の数
+５月（第１周)：６０
+６月（第２周）：７２
+６月（第３周）：３０
+合計：１６２
