@@ -40,6 +40,10 @@ delete [SELECT ID FROM pa_cv19_reserv__Time_Slot__c WHERE pa_cv19_reserv__Operat
 全削除
 delete [SELECT Id, Name FROM pa_cv19_reserv__Booking__c limit 1000];
 
+●会場ワクチン設定
+全削除
+delete [SELECT Id, Name FROM pa_cv19_reserv__Place_Vaccine_Junction__c limit 1000];
+
 ●接種者
 全削除
 delete [SELECT Id, Name FROM pa_cv19_reserv__CustomContact__c limit 500];
